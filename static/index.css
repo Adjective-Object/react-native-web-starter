@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#react-host {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    margin: 0 auto 0 auto;
+}
+
+#react-host h1 {
+    text-align: center;
+    font-size: 20;
+    font-weight: normal;
+}
+
+#react-host .text {
+    flex: 1;
+    overflow-y: auto;
+    margin: 0.5em;
+}
+
+#react-host .text::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+#react-host .text::-webkit-scrollbar-thumb {
+  background-color: #aaaaaa;
+}
+button.add-text {
+    appearance: none;
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    background-color: #222222;
+    color: #ffffff;
+    margin: 0.25em;
+}
+
