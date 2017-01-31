@@ -1,18 +1,33 @@
 # react-native-web-starter
 
-starter for building an application that shares behaviour between
+starter for building an application that shares behavior between
 mobile, ios, and android clients.
 
 ## Quickstart
+
+1. Install nodejs@6+ with your system package manager, or [download it][node-dl]
+2. add `./node_modules/.bin` to your `$PATH`
+3. install yarn (`npm install -g yarn`)
+
+Download the project and its dependencies
+```shell
+git clone git@github.com:Adjective-Object/react-native-web-starter.git
+cd react-native-web-starter
+yarn install
+```
+
 To develop on web:
 ```shell
 webpack --watch
 cd dist && php -S localhost:8080 # open your favorite dev server in the /dist folder
 ```
 
-To develop on android or ios:
-```
-react-native start
+To work on mobile, follow the [react-native guide][react-native-setup] for setting up your mobile development environment
+
+then to begin developing:
+
+```shell
+react-native start          # start the packaging server
 react-native run-ios
 react-native run-android
 ```
@@ -21,8 +36,7 @@ react-native run-android
 
 ### ES6 Basics
 
-ES6 (ECMAScript6) is a modern version of javascript. The most important things
-it adds are _modules_ and _arrow functions_.
+ES6 (ECMAScript6) is a modern version of javascript. The most important things it adds are _modules_ and _arrow functions_.
 
 ```javascript
 const arrowFunction = () => {
@@ -54,9 +68,7 @@ import defaultExport2 {nonDefaultExport2} from './some-file-3'
 
 ### User Interface
 
-[React](https://facebook.github.io/react/) is used for the interface of this
-application. React models the UI as a tree of components, which are marked up
-with an embedded XML-like language inside javascript (JSX)
+[React](https://facebook.github.io/react/) is used for the interface of this application. React models the UI as a tree of components, which are marked up with an embedded XML-like language inside javascript (JSX)
 
 ```jsx
 <View style={some.javascript.value} className="or-a-string">
@@ -74,19 +86,18 @@ with an embedded XML-like language inside javascript (JSX)
 
 ### Data Flow
 
-This application uses [Redux](https://github.com/reactjs/redux) for state
-management, The skinny of the redux data model is:
+This application uses [Redux](https://github.com/reactjs/redux) for state management, The skinny of the redux data model is:
 
 ```
 
     ┏━━━━━━━┓     ┏━━━━━━━━━┓     ┏━━━━━━━━━━━┓
     ┃ state ┃ ══> ┃ reducer ┃ ══> ┃ new state ┃
-    ┗━━━━━━━┛     ┗━━━━━━━━━┛     ┗━━━━━━━━━━━┛
-                       ^
-                       ║
-                  ┏┈┈┈┈┈┈┈┈┓
-                  ┊ action ┊
-                  ┗┈┈┈┈┈┈┈┈┛
+    ┗━━━━━━━┛   ^ ┗━━━━━━━━━┛     ┗━━━━━━━━━━━┛
+                ║
+                ║
+    ┏┈┈┈┈┈┈┈┈┓  ║
+    ┊ action ┊ ═╝
+    ┗┈┈┈┈┈┈┈┈┛
 
 ```
 
@@ -144,3 +155,6 @@ exported from these modules accept the same arguments
 | web      | `import foo from './foo'`  | `foo.web.js`     | `foo.js`   |
 | android  | `import foo from './foo'`  | `foo.android.js` | `foo.js`   |
 | ios      | `import foo from './foo'`  | `foo.ios.js`     | `foo.js`   |
+
+[react-native-setup]: https://facebook.github.io/react-native/docs/getting-started.html
+[node-dl]: https://nodejs.org/en/download/
