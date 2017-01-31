@@ -38,16 +38,16 @@ export const nonDefaultExport = () => {
     console.log("this is not a default export")
 }
 
-# this imports the default export into the current scope from ./some-file.js
-# and names it 'someFileDefaultExport'
+// this imports the default export into the current scope from ./some-file.js
+// and names it 'someFileDefaultExport'
 import someFileDefaultExport from './some-file'
 
-# this imports some other exported member into the current scope from
-# ./some-file-2.js
+// this imports some other exported member into the current scope from
+// ./some-file-2.js
 import {nonDefaultExport} from './some-file-2'
 
-# this imports both the default and some non-default members into the
-# current scope from ./some-file-3.js
+// this imports both the default and some non-default members into the
+// current scope from ./some-file-3.js
 import defaultExport2 {nonDefaultExport2} from './some-file-3'
 
 ```
