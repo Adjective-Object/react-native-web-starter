@@ -21,10 +21,10 @@ react-native run-android
 
 ### ES6 Basics
 
-ES6 (ECAMScript6) is a modern version of javascript. The most important things
+ES6 (ECMAScript6) is a modern version of javascript. The most important things
 it adds are _modules_ and _arrow functions_.
 
-```es6
+```javascript
 const arrowFunction = () => {
     console.log("this is a function with lexically scoped `this`")
 };
