@@ -5,6 +5,7 @@ in with pkgs; let
     
     dependencies = [
       nodejs-7_x
+      androidenv.androidsdk_6_0
     ];
 
 in {
