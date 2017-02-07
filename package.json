@@ -1,11 +1,11 @@
 {
-  "name": "fitness",
+  "name": "react-native-web-starter",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "lint": "prettier --write --single-quote --flow-parser --trailing-comma src/**/*.js index.*.js"
+    "lint": "prettier --write --single-quote --flow-parser --trailing-comma src/**/*.js index.*.js __tests__/**.js"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.22.0",

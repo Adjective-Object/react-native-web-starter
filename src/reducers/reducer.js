@@ -19,11 +19,8 @@ export const getInitialState = () => ({
 });
 
 export default function applicationReducer(state, action) {
-  console.log('state ', state);
-  console.log('action', action);
   const reducer = actionReducers[action.type];
   if (reducer === undefined) {
-    console.log('no reducer registered, ignoring action');
     return state || getInitialState();
   }
 
